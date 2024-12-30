@@ -18,14 +18,13 @@ fn main() {
                 let fruit_selected: String = input.trim().to_lowercase();
                 // println!("Fruit Selected : {}", fruit_selected);
                 if !guess_list.contains(&fruit_selected.as_str()) {
-                    println!("Well Well Well. What a loser, can't even guess a guess well.");
                     continue;
                 }
                 if guess_checker(&fruit_selected, random_fruit) {
                     println!("Why cheer so much, it's just a guess! You Won!");
                     break;
                 } else {
-                    println!("Retry");
+                    println!("Well Well Well. What a loser, can't even guess a guess well.");
                 }
             }
             Err(error) => {
